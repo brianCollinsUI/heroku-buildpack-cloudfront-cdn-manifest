@@ -3,7 +3,7 @@
 download_file () {
   local remote_path=$1
 
-  curl "https://assets.userinterviews.com/${remote_path}" >> public/packs/mainfest.json # TODO need url to be based on ENV
+  curl "https://assets.userinterviews.com/${remote_path}" >> $build_dir/public/packs/mainfest.json # TODO need url to be based on ENV
 
   local status=$?
 

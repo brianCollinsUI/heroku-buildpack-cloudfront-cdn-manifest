@@ -11,5 +11,7 @@ done
 
 mkdir -p $build_dir/public/assets
 
-download_file assets/manifest-$SOURCE_VERSION.json || \
-  download_file assets/manifest-latest.json
+download_file assets/manifest-$SOURCE_VERSION.json assets/.sprockets-manifest-$SOURCE_VERSION.json # || \
+  # download_file assets/manifest-latest.json
+
+download_file packs/manifest.json packs/manifest.json

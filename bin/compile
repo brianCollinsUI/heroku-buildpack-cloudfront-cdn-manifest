@@ -9,8 +9,7 @@ for import in "$(dirname ${bin_dir})/lib/"*; do
   source "$import"
 done
 
-mkdir -p public/assets
-mkdir -p public/packs
+mkdir -p $build_dir/public/assets
 
 download_file assets/manifest-$SOURCE_VERSION.json || \
   download_file assets/manifest-latest.json
